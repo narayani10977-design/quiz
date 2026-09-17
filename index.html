@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avengers Quiz</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- LOGIN PAGE -->
+    <section id="loginPage" class="page active">
+
+        <div class="login-card">
+
+            <div class="logo">⚡</div>
+
+            <h1>AVENGERS</h1>
+            <h2>ULTIMATE QUIZ</h2>
+
+            <p class="subtitle">
+                Test your knowledge of Earth's Mightiest Heroes!
+            </p>
+
+            <input
+                type="text"
+                id="username"
+                placeholder="Enter your name"
+                autocomplete="off"
+            >
+
+            <button onclick="startQuiz()" class="main-btn">
+                ENTER THE QUIZ ⚡
+            </button>
+
+            <p id="loginError" class="error"></p>
+
+        </div>
+
+    </section>
+
+
+    <!-- QUIZ PAGE -->
+    <section id="quizPage" class="page">
+
+        <header class="quiz-header">
+
+            <div>
+                <h1>⚡ AVENGERS QUIZ</h1>
+                <p>Welcome, <span id="displayName"></span>!</p>
+            </div>
+
+            <div class="progress-box">
+                <span id="questionNumber">Question 1 of 20</span>
+            </div>
+
+        </header>
+
+
+        <main class="quiz-container">
+
+            <div class="quiz-intro">
+                <h2>How well do you know the Avengers?</h2>
+                <p>Select one answer for every question.</p>
+            </div>
+
+            <form id="quizForm"></form>
+
+            <button
+                type="button"
+                onclick="submitQuiz()"
+                class="submit-btn"
+            >
+                SUBMIT QUIZ 🚀
+            </button>
+
+        </main>
+
+    </section>
+
+
+    <!-- RESULT PAGE -->
+    <section id="resultPage" class="page">
+
+        <div class="result-card">
+
+            <div class="trophy">🏆</div>
+
+            <h1>QUIZ COMPLETE!</h1>
+
+            <p class="result-name">
+                Well done, <span id="resultName"></span>!
+            </p>
+
+            <div class="score-circle">
+                <span id="score">0</span>
+                <small>/ 20</small>
+            </div>
+
+            <h2 id="resultTitle"></h2>
+
+            <p id="resultMessage"></p>
+
+            <div class="result-details">
+                <div>
+                    <strong id="correctAnswers">0</strong>
+                    <span>Correct</span>
+                </div>
+
+                <div>
+                    <strong id="wrongAnswers">0</strong>
+                    <span>Wrong</span>
+                </div>
+
+                <div>
+                    <strong id="percentage">0%</strong>
+                    <span>Score</span>
+                </div>
+            </div>
+
+            <button onclick="restartQuiz()" class="main-btn">
+                PLAY AGAIN 🔄
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
